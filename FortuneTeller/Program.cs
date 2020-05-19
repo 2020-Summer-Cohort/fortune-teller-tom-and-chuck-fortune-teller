@@ -26,6 +26,7 @@ namespace FortuneTeller
 
 
             Console.WriteLine("Pick your favorite ROYGBIV color");
+
             Console.WriteLine("1. Red");
             Console.WriteLine("2. Orange");
             Console.WriteLine("3. Yellow");
@@ -33,49 +34,81 @@ namespace FortuneTeller
             Console.WriteLine("5. Blue");
             Console.WriteLine("6. Indigo");
             Console.WriteLine("7. Violet");
-            string userInput = Console.ReadLine();
-            
+            Console.WriteLine("8. Help");
 
-            Console.WriteLine("How many siblings do you have?");
-            string userSibilings = Console.ReadLine();
-            int numberOfSiblings = Convert.ToInt32(userSibilings);
+            string menuChoice = Console.ReadLine();
+
+            switch (menuChoice)
+            {
+                case "1":
+                    string color1 = "You will be fat";
+                    break;
+                case "2":
+                    Console.WriteLine("You will be in shape");
+                    break;
+                case "3":
+                    Console.WriteLine("You will recieve round house kick to the face by Chuck Norris");
+                    break;
+                case "4":
+                    Console.WriteLine("You will travel the world");
+                    break;
+                case "5":
+                    Console.WriteLine("You fall in love with Jennifer Lopez");
+                    break;
+                case "6":
+                    Console.WriteLine("Your wife will get fat");
+                    break;
+                case "7":
+                    Console.WriteLine("You will be in good health");
+                    break;
+            }
+
+
+
+            int numberOfSiblings;
+            do {
+                Console.WriteLine("How many siblings do you have?");
+                string userSibilings = Console.ReadLine();
+                numberOfSiblings = Convert.ToInt32(userSibilings);
+            } while (numberOfSiblings < 0);
 
             bool isEven = age1 % 2 == 0;
 
+            //age
+            string lifeSpan = "";
             if (isEven) 
             {
-                Console.WriteLine("You have 1 month to live");
+                lifeSpan = "You have 1 month to live";
             }
             else
             {
-                Console.WriteLine("You will live another 40 years");
+                lifeSpan = "You will live another 40 years";
             }
+            Console.WriteLine(lifeSpan);
+
+            //siblings
             if (numberOfSiblings <= 0) 
             {
                 Console.WriteLine("You will have a bunch of kids");   
             }
-            if (numberOfSiblings == 1)
+            else if (numberOfSiblings == 1)
             {
                 Console.WriteLine("You will inherit your grandparents house");
             }
-            if (numberOfSiblings == 2)
+            else if (numberOfSiblings == 2)
             {
                 Console.WriteLine("You will inherit LeBron James basketball skills");
             }
-            if (numberOfSiblings == 3)
+            else if (numberOfSiblings == 3)
             {
                 Console.WriteLine("You will inherit your parents credit card bills");
             }
-            if (numberOfSiblings > 3)
+            else if (numberOfSiblings > 3)
             {
                 Console.WriteLine("You will get drafted into the military have fun lol");
             }
-
-            switch (userInput)
-            {
-                case "1": FortuneTeller.GetColorRed();
-            }
-
+            
+            
 
 
 
