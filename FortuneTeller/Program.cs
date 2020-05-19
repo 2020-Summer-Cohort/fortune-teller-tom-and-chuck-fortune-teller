@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using System.Drawing;
 
 namespace FortuneTeller
 {
@@ -25,7 +26,15 @@ namespace FortuneTeller
 
 
             Console.WriteLine("Pick your favorite ROYGBIV color");
-            string userColor = Console.ReadLine();
+            Console.WriteLine("1. Red");
+            Console.WriteLine("2. Orange");
+            Console.WriteLine("3. Yellow");
+            Console.WriteLine("4. Green");
+            Console.WriteLine("5. Blue");
+            Console.WriteLine("6. Indigo");
+            Console.WriteLine("7. Violet");
+            string userInput = Console.ReadLine();
+            
 
             Console.WriteLine("How many siblings do you have?");
             string userSibilings = Console.ReadLine();
@@ -61,11 +70,11 @@ namespace FortuneTeller
             {
                 Console.WriteLine("You will get drafted into the military have fun lol");
             }
-            if (userColor)
+
+            switch (userInput)
             {
-
+                case "1": FortuneTeller.GetColorRed();
             }
-
 
 
 
