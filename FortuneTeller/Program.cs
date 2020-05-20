@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.ComponentModel.Design;
 using System.Drawing;
 
@@ -26,7 +27,6 @@ namespace FortuneTeller
 
 
             Console.WriteLine("Pick your favorite ROYGBIV color");
-
             Console.WriteLine("1. Red");
             Console.WriteLine("2. Orange");
             Console.WriteLine("3. Yellow");
@@ -35,13 +35,14 @@ namespace FortuneTeller
             Console.WriteLine("6. Indigo");
             Console.WriteLine("7. Violet");
             Console.WriteLine("8. Help");
+            string userColor = Console.ReadLine();
 
             string menuChoice = Console.ReadLine();
 
             switch (menuChoice)
             {
                 case "1":
-                    string color1 = "You will be fat";
+                    Console.WriteLine("You will be fat");
                     break;
                 case "2":
                     Console.WriteLine("You will be in shape");
@@ -107,8 +108,7 @@ namespace FortuneTeller
             {
                 Console.WriteLine("You will get drafted into the military have fun lol");
             }
-            
-            
+            Console.WriteLine(userColor);
 
 
 
@@ -119,6 +119,8 @@ namespace FortuneTeller
 
 
 
+
+            Console.ReadLine();
 
 
         }
